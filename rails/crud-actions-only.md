@@ -54,7 +54,7 @@ end
 ### Good
 
 ````ruby
-class PostsController < ApplicationController
+class PasswordResetsController < ApplicationController
   # POST /password_resets
   def create
     current_user.reset_password
