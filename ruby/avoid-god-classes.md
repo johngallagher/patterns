@@ -2,7 +2,7 @@
 
 Classes should not violate the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), and the worst example of this violation can be the "God Object" - a class that knows about almost everything.
 
-In many systems, including our own, the `User` class can become a magnet for behaviour. A big `User` class is not _necessarily_ bad - users are of course a very important component of the system, and should be respected as such. But this understanding should not lead to complacency, and 
+In many systems, including our own, the `User` class can become a magnet for behaviour and can easily become a "God Object". When a "God Object" is identified, do not add any more behaviour to the class unless a very compelling reason can be given.
 
 ## Bad
 
