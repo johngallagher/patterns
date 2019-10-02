@@ -330,6 +330,7 @@ AmbiguousBlockAssociation:
 
 Rails/UnknownEnv:
   Environments:
+    - production
     - newproduction
     - development
     - test
