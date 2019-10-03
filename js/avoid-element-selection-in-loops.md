@@ -21,7 +21,7 @@ Cache an element outside the loop first, and/or consider refactoring with native
     }
 ````
 
-## Example 2 - Refactor With Additional Loop
+## Example 2 - Refactor With Additional for Loop
 
 ### Bad
 ````javascript
@@ -48,3 +48,32 @@ Cache an element outside the loop first, and/or consider refactoring with native
       }
     }
 ````
+
+## Example 3 - Refactor with forEach()
+
+### Bad
+````javascript
+    for (var i = 0; i < tags.length; i++) {
+      var tag_name = $('.marketplace-post-tags input[data-id=' + tags[i] + ']').attr('title');
+
+      // rest of block omitted
+    }
+````
+
+### Good
+````javascript
+    var tag_selectors = tags.map(function(tag) {
+      return '.marketplace-post-tags input[data-id=' + tag + ']';
+    });
+    tag_selectors.forEach(function(selector) {
+      var elements = document.getElementsByClassName(selector);
+        elements.forEach(function(element) {
+          var tag_name = element.getAttribute('title');
+
+          // rest of block omitted
+      });
+    });
+````
+
+
+    
