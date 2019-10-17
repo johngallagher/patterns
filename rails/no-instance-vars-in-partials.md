@@ -13,7 +13,7 @@ If you rely on the “Rails magic” early on, you often pay in complexity later
 
 ## Bad
 
-````ruby
+```erb
 <%# app/views/album/show.html.erb %>
 
 <% @album.songs.each do |song| %>
@@ -21,23 +21,23 @@ If you rely on the “Rails magic” early on, you often pay in complexity later
   <%= render "character", collection: song.characters,
                           as: :character %>
 <% end %>
-````
+```
 
-````ruby
+```erb
 <%# app/views/album/_character.html.erb %>
 
 <p><%= character.name %></p>
 <div class="popup">
   Other Songs: <%= character.features_on_tracks(@album.songs).to_sentence %>
 </div>
-````
+```
 
 Not too obvious that the `_character` partial would need an `@album` instance variable defined, right?
 Since all instance vars have `nil` value assigned by default, the exception might not be raised if we miss it
 
 ## Good
 
-````ruby
+```erb
 <%# app/views/album/show.html.erb %>
 
 <% @album.songs.each do |song| %>
@@ -46,15 +46,15 @@ Since all instance vars have `nil` value assigned by default, the exception migh
                           as: :character,
                           locals: { songs: @album.songs } %>
 <% end %>
-````
+```
 
-````ruby
+```erb
 <%# app/views/album/_character.html.erb %>
 
 <p><%= character.name %></p>
 <div class="popup">
   Other Songs: <%= character.features_on_tracks(songs).to_sentence %>
 </div>
-````
+```
 
 In this case an exception is always raised when the `songs` local variable is missed
