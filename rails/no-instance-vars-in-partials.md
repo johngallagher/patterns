@@ -11,7 +11,7 @@ As your application becomes more complex, a view might contain several partials�
 
 If you rely on the “Rails magic” early on, you often pay in complexity later on. This is a pattern of many of the issues that people have with Rails’ HTML rendering environment. If you avoid using instance variables in your partials, they become simpler to reuse, even as your application grows in complexity
 
-## Bad
+## Bad
 
 ```erb
 <%# app/views/album/show.html.erb %>
