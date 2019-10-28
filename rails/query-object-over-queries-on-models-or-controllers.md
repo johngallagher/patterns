@@ -59,7 +59,7 @@ module WordpressBlogPosts
     attr_reader :relation
 
     def initialize(base_relation=nil)
-      base_relation = WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author) unless base_relation
+      @relation = base_relation || WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author)
     end
 
     def call
