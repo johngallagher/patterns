@@ -47,11 +47,14 @@ A better Alternative is to use the Query Object.
 
 
 ````ruby
+class ApplicationQuery
+  class << self
+    delegate :call, to: :new
+  end
+end
+
 module WordpressBlogPosts
-  class RecentPostsQuery
-    class << self
-      delegate :call, to: :new
-    end
+  class RecentPostsQuery < ApplicationQuery
 
     attr_reader :relation
 
