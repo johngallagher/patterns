@@ -43,7 +43,7 @@ class WordpressBlogPost < ActiveRecord::Base
 end
 ````
 
-A better Alternative is to use the Query Object.
+A better alternative is to use a Query object.
 
 
 ````ruby
