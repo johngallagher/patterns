@@ -23,7 +23,7 @@ class WordpressPopularBlogPostsController < ApplicationController
 end
 ````
 
-## Good
+## Better
 
 ````ruby
 class WordpressPopularBlogPostsController < ApplicationController
@@ -43,35 +43,40 @@ class WordpressBlogPost < ActiveRecord::Base
 end
 ````
 
-A better alternative is to use a Query object.
-
+## Good
 
 ````ruby
-class ApplicationQuery
-  class << self
-    delegate :call, to: :new
+class RecentWordpressBlogPostQuery < ApplicationQuery
+
+  def initialize(relation = nil)
+    @relation = relation 
+  end
+
+  def all
+    base_relation.not_excluded.ordered
+  end
+
+  private
+
+  attr_reader :relation
+
+  def ordered
+    not_excluded.order(created_at: :desc)
+  end
+
+  def not_excluded
+    base_relation.where.not(wordpress_blog_post_category_id: [1, 2, 3])
+  end
+
+  def base_relation
+    relation || WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author)
   end
 end
 
-module WordpressBlogPosts
-  class RecentPostsQuery < ApplicationQuery
 
-    attr_reader :relation
-
-    def initialize(base_relation=nil)
-      @relation = base_relation || WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author)
-    end
-
-    def call
-      relation.where.not(wordpress_blog_post_category_id: WordpressBlogPostCategory.
-        invalid_wordpress_blog_post_category.select(:id)).
-        order(created_at: :desc).
-        references(:wordpress_blog_post_category)
-    end
+class WordpressPopularBlogPostsController < ApplicationController
+  def index
+    @posts = RecentWordpressBlogPostQuery.all
   end
-end
-
-class WordpressBlogPost < ActiveRecord::Base
-  scope :recent_posts, WordpressBlogPosts::RecentPostsQuery
 end
 ````
