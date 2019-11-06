@@ -46,12 +46,6 @@ end
 ## Good
 
 ````ruby
-class ApplicationQuery
-  def self.all
-    new.all
-  end
-end
-
 class RecentWordpressBlogPostQuery < ApplicationQuery
   def all
     WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author).
