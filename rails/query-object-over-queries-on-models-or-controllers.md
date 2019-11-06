@@ -46,33 +46,27 @@ end
 ## Good
 
 ````ruby
-class RecentWordpressBlogPostQuery < ApplicationQuery
-
-  def initialize(relation = nil)
-    @relation = relation 
+class ApplicationQuery
+  def self.all
+    new.all
   end
+end
 
+class RecentWordpressBlogPostQuery < ApplicationQuery
   def all
-    base_relation.not_excluded.ordered
+    WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author).
+      not_hidden.
+      where.not(wordpress_blog_post_category_id: invalid_categories).
+      order(created_at: :desc).
+      references(:wordpress_blog_post_category)
   end
 
   private
 
-  attr_reader :relation
-
-  def ordered
-    not_excluded.order(created_at: :desc)
-  end
-
-  def not_excluded
-    base_relation.where.not(wordpress_blog_post_category_id: [1, 2, 3])
-  end
-
-  def base_relation
-    relation || WordpressBlogPost.includes(:wordpress_blog_post_category, :wordpress_author)
+  def invalid_categories
+    WordpressBlogPostCategory.invalid_wordpress_blog_post_category.select(:id)
   end
 end
-
 
 class WordpressPopularBlogPostsController < ApplicationController
   def index
