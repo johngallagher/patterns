@@ -22,7 +22,6 @@ It helps in improving clarity and expectation of the spec.
 ## Bad
 
 ````ruby
-BlogPostCategory.new(name: "Real Estate Marketing")
 alice = create(:user, name: "Alice")
 alice.friends << create(:user, name: "Bob")
 create(:user, name: "Mary")
