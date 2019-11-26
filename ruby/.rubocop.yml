@@ -337,3 +337,7 @@ Rails/UnknownEnv:
     - development
     - test
     - staging
+
+Rails/SkipsModelValidations:
+  Whitelist:
+    - increment!
