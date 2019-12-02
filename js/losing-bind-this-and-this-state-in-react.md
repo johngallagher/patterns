@@ -5,7 +5,14 @@ Cons:
 - it looks pretty ugly
 - it’s taking up some extra space in the codebase
 
+# Reference
+ 
+[Class Fields Declaration](https://github.com/tc39/proposal-class-fields) proposal is currently at Stage 3 in the [TC-39](https://github.com/tc39/proposals) process
+
 ### Bad
+
+React components often have methods tied to DOM events. To ensure this resolves to the component, it’s necessary to bind every method accordingly in the constructor.
+Also there you usually set initial state in the constructor of the class.
 
 ````javascript
   import React, { Component } from "react";
@@ -40,6 +47,9 @@ Cons:
 ````
 
 ### Good
+
+If toggleButtonTitle is defined as a class field, it can be set to a function using an ES6 => fat arrow, which automatically binds it to the defining object.
+The state can also be declared as a class field so no constructor is required.
 
 ````javascript
   import React, { Component } from 'react';
