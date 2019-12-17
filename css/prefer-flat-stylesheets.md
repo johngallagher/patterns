@@ -9,7 +9,7 @@ Often, when writing CSS, we will choose to nest selectors, simply because it mir
 
 Instead, we should aim to keep stylesheets as flat as possible, defining all selectors as top-level. This makes them globally **available for reuse**, and the flatness _enforces_ **specific naming** conventions in order to avoid style pollution.
 
-When using SCSS, avoid the temptation to nest things using the parent selector (`&`) in order to reduce repetition. While this will still result in a flat stylesheet, it introduces its own problems: it is impossible to _search_ for these selectors in your editor, and visually, it still appears as if the selectors are nested, which communicates the wrong thing.
+When using SCSS, avoid the temptation to nest things using the parent selector (`&`) in order to reduce repetition. While this will still result in a flat stylesheet, it introduces its own problems: it is impossible to search for these selectors in your editor, and visually, it still appears as if the selectors are nested, which communicates the wrong thing.
 
 ### Bad
 ````html
@@ -112,7 +112,7 @@ This exception may also apply to styles that (unlike `flex` and `display: flex`)
 
 Consider a mockup for a blog feature - a page that is a vertical list of multiple blog posts. Each blog post can be considered its own component. In the mockup, each blog post has 20 pixels of space between itself and the next, which will be represented in CSS as `margin-bottom`.
 
-The definition of the reusable "blog post" component _should not_ include knowledge of this margin. This is another rule that should only apply in a certain context: when the blog post is displayed alongside other blog posts. Because this rule defining spacing between the elements is dependent on context, nesting would be appropriate:
+The definition of the reusable "blog post" component _should not_ include knowledge of this margin. This is another style rule that should only apply in a certain context: when the blog post is displayed alongside other blog posts. Because this rule defining spacing between the elements is dependent on context, nesting would be appropriate:
 
 ````scss
 .all-blog-posts {
@@ -130,3 +130,7 @@ The definition of the reusable "blog post" component _should not_ include knowle
 A good rule of thumb (although this is not absolute) is to assume that rule sets in CSS should only include rules that apply _inside_ its box (the rectangle of space it consumes on the page). Margins, being "outside the box", should therefore not be considered rules defining the component, and instead _contextual_ rules.
 
 In many cases, another example of this is `width`. The width of an element is often, deceptively, actually dependent on the width of its parent, even though a mockup may suggest a predefined width.
+
+## Further Reading
+
+* [Avoid nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
