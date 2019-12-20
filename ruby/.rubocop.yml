@@ -172,8 +172,8 @@ PercentLiteralDelimiters:
 PerlBackrefs:
   Enabled: false
 
-PredicateName:
-  NamePrefixBlacklist:
+Naming/PredicateName:
+  ForbiddenPrefixes:
     - is_
 
 Proc:
@@ -247,7 +247,7 @@ DeprecatedClassMethods:
 ElseLayout:
   Enabled: false
 
-HandleExceptions:
+SuppressedException:
   Enabled: false
 
 LiteralAsCondition:
@@ -294,9 +294,9 @@ LeadingCommentSpace:
   Enabled: false
 Rails:
   Enabled: true
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Metrics/BlockLength:
