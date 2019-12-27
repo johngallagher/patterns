@@ -6,7 +6,7 @@ A good alternative is to define scopes on the model, which are exposed as class 
 
 ## Bad
 
-````ruby
+```ruby
 def PostsController < ApplicationController
   def index
     @posts = BlogPost.
@@ -15,11 +15,11 @@ def PostsController < ApplicationController
              where(public: true)
   end
 end
-````
+```
 
 ## Good
 
-````ruby
+```ruby
 def PostsController < ApplicationController
   def index
     @posts = BlogPost.active.recent.visible
@@ -31,9 +31,9 @@ class BlogPost < ActiveRecord::Base
   scope :recent, -> { where("created_at > ", 2.weeks.ago) }
   scope :visible, -> { where(public: true) }
 end
-````
+```
 
-````ruby
+```ruby
 def PostsController < ApplicationController
   def index
     @posts = BlogPost.recently_published
@@ -46,4 +46,4 @@ def PostsController < ApplicationController
     scope :recently_published, -> { active.recent.visible }
   end
 end
-````
+```
