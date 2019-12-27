@@ -4,7 +4,7 @@ Prefer scopes or explicit methods defined on the model class. The purpose of the
 
 A good alternative is to define scopes on the model, which are exposed as class methods, or to define the class methods yourself in some cases. Another potential solution is a Query Object.
 
-## Bad
+## Bad
 
 ```ruby
 def PostsController < ApplicationController
