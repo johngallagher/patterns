@@ -2,7 +2,7 @@
 
 > TL;DR. Don't use Rails concerns.
 
-Concerns are a great way to share reusable functionality between classes. They come with drawbacks however as discussed (here)[https://medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d].
+Concerns are a great way to share reusable functionality between classes. They come with drawbacks however as discussed [here](https://medium.com/@carlescliment/about-rails-concerns-a6b2f1776d7d).
 
 Almost every problem using a concern solves, can be solved in more explicit ways. For example with inheritence, or object-oriented code.
 
