@@ -7,7 +7,7 @@ So that we are consistent we choose to adopt the following:
 ## /app
 
 - Our models, controllers, views, jobs, services, queries and mailers.
-- Any other entity we create (class, module) that holds some business logic.
+- Any other entity we create (class, module) that holds some **business logic**.
 
 ## /lib
 
