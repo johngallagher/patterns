@@ -1,3 +1,4 @@
+title: BiggerPockets Patterns
 remote_theme: fongandrew/hydeout
 defaults:
   -
@@ -11,3 +12,4 @@ collections:
     output: true
     permalink: /:categories/:name
     layout: "pattern"
+exclude: ["README.md"]

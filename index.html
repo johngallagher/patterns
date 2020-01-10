@@ -1,0 +1,22 @@
+---
+layout: index
+title: BiggerPockets Patterns
+---
+
+<h1>Patterns</h1>
+
+<p>This is a collection of guidelines and style guide rules that we follow when writing software at BiggerPockets. Use these to guide implementation and reference them during peer review.</p>
+
+{% comment %}
+  The code below dynamically generates a sidebar nav of pages with
+  `sidebar_link: true` in the front-matter. See readme for usage.
+{% endcomment %}
+{% assign pages_list = site.pages|sort:"sidebar_sort_order" %}
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if node.sidebar_link %}
+      <a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ node.url | relative_url }}">{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}
