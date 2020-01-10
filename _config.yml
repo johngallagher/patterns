@@ -1,4 +1,4 @@
-theme: jekyll-theme-midnight
+remote_theme: "wu-kan/wu-kan.github.io"
 defaults:
   -
     scope:
