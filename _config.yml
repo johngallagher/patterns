@@ -1,4 +1,4 @@
-remote_theme: wu-kan
+remote_theme: poole/hyde
 defaults:
   -
     scope:
