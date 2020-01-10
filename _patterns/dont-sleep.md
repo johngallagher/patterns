@@ -1,4 +1,7 @@
-# Don't use `sleep` in specs
+---
+categories: RSpec
+name: Don't use `sleep` in specs
+---
 
 Sometimes if we're waiting for some javascript to run or an operation to complete we might add a `sleep` in our specs.
 

@@ -1,4 +1,7 @@
-# Use descriptive real world data
+---
+categories: RSpec
+name: Use descriptive real world data
+---
 
 Let's try to use real world descriptive data or something that is more intuitive for sample data in our specs.
 It helps in improving clarity and expectation of the spec.

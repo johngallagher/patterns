@@ -1,4 +1,7 @@
-# Restrict controllers to CRUD actions
+---
+categories: Rails
+name: Restrict controllers to CRUD actions
+---
 
 In a Rails application, each controller should represent a _resource_ type. In a RESTful design, the only actions an API consumer should be able to perform on a resource are: reading, creation, modification, and deletion. Rails usually will map these actions to HTTP verb -> method name pairs:
 

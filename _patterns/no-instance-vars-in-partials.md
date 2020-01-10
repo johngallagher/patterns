@@ -1,4 +1,7 @@
-# Avoid using instance variables in view partials
+---
+categories: Rails
+name: Avoid using instance variables in view partials
+---
 
 ![](../aux_assets/images/aaron_view_instance_vars.png)
 

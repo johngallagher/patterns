@@ -1,11 +1,13 @@
-# Avoid querying sets of objects from models/controllers
+---
+categories: Rails
+name: Avoid querying sets of objects from models/controllers
+---
 
 Consider extracting complex SQL queries into their own classes, which would otherwise clutter ActiveRecord models or controllers.
 
 # In Practice
 
 Query object goes in `app/queries` folder.
-
 
 
 ## Bad
