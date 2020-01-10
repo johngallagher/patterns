@@ -2,5 +2,5 @@
 
 {% assign pages = site.patterns | where: "categories", "CSS" %}
 {% for page in pages %}
-- [{{ page.name }}]({{ page.url }})
+- [{{ page.name }}]({{ page.url | relative_url }})
 {% endfor %}
