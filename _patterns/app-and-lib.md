@@ -1,4 +1,7 @@
-# App vs Lib
+---
+categories: Rails
+name: App vs Lib
+---
 
 Ah Rails.. So many directories! Where should I put my code?
 

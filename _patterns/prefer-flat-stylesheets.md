@@ -1,4 +1,7 @@
-# Prefer Flat Stylesheets
+---
+categories: CSS
+name: Prefer Flat Stylesheets
+---
 
 Often, when writing CSS, we will choose to nest selectors, simply because it mirrors the hierachy of the companion markup. This has multiple disadvantages:
 

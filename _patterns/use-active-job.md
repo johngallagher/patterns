@@ -1,4 +1,7 @@
-# Use ActiveJob
+---
+categories: Rails
+name: Use ActiveJob
+---
 
 When writing a background task, use ActiveJob rather than Sidekiq workers.
 

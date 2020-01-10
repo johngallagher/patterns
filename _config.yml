@@ -1,1 +1,13 @@
 theme: jekyll-theme-slate
+defaults:
+  -
+    scope:
+      path: ""
+      type: "patterns"
+    values:
+      layout: "pattern"
+collections:
+  patterns:
+    output: true
+    permalink: /:categories/:name
+    layout: "pattern"
