@@ -1,4 +1,4 @@
-remote_theme: "wu-kan/wu-kan.github.io"
+remote_theme: wu-kan
 defaults:
   -
     scope:
