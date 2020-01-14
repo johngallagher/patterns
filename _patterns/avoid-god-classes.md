@@ -1,10 +1,13 @@
-# Avoid 'God' Objects
+---
+categories: Ruby
+name: Avoid 'God' Objects
+---
 
 Classes should not violate the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), and the worst example of this violation can be the "God Object" - a class that knows about almost everything.
 
 In many systems, including our own, the `User` class can become a magnet for behaviour and can easily become a "God Object". When a "God Object" is identified, do not add any more behaviour to the class unless a very compelling reason can be given.
 
-## Bad
+## Bad
 
 ````ruby
 class User
@@ -36,7 +39,7 @@ class User
 end
 ````
 
-## Good
+## Good
 
 ````ruby
 class User

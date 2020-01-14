@@ -1,4 +1,7 @@
-# Never use JQuery selectors in loops
+---
+categories: Javascript
+name: Never use JQuery selectors in loops
+---
 
 Codeclimate already catches repeated (uncached) element selector statements. It may seem innocuous to write just one, but a single selection written inside a loop will also kill performance.
 Cache an element outside the loop first, and/or consider refactoring with native JS methods.

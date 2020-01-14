@@ -1,4 +1,7 @@
-# Detach DOM elements before manipulation
+---
+categories: Javascript
+name: Detach DOM elements before manipulation
+---
 
 DOM manipulation is always slow. It is better to avoid manipulating directly onto the live DOM if at all possible.
 Simply removing with `detach()`, manipulating and re-adding will improve performance. Be careful to re-attach the element in the same position!

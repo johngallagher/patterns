@@ -1,4 +1,7 @@
-# Avoid building ActiveRecord queries outside of models
+---
+categories: Rails
+name: Avoid building ActiveRecord queries outside of models
+---
 
 Prefer scopes or explicit methods defined on the model class. The purpose of the model is to represent records in, and the schema of, the database - so keeping query logic in the model is appropriate.
 

@@ -1,0 +1,15 @@
+title: BiggerPockets Patterns
+remote_theme: fongandrew/hydeout
+defaults:
+  -
+    scope:
+      path: ""
+      type: "patterns"
+    values:
+      layout: "pattern"
+collections:
+  patterns:
+    output: true
+    permalink: /:categories/:name
+    layout: "pattern"
+exclude: ["README.md"]
