@@ -8,13 +8,13 @@ It helps in improving clarity and expectation of the spec.
 
 ## Use of realistic data
 
-## Bad
+## Bad
 
 ````ruby
   BlogPostCategory.new(name: "mac and cheese")
 ````
 
-## Good
+## Good
 
 ````ruby
   BlogPostCategory.new(name: "Real Estate Marketing")
@@ -22,7 +22,7 @@ It helps in improving clarity and expectation of the spec.
 
 ## Use of descriptive data
 
-## Bad
+## Bad
 
 ````ruby
 alice = create(:user, name: "Alice")
@@ -34,7 +34,7 @@ expect(page).to have_text("Bob")
 expect(page).to_not have_text("Mary") # Who is Bob/Mary and how are they related again?
 ````
 
-## Good
+## Good
 
 ````ruby
 user = create(:user)
