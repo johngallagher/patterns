@@ -4,4 +4,4 @@ layout: default
 
 <h1>{{ page.name | markdownify }}</h1>
 
-{{ content }}
+{% include anchor_headings.html html=content anchorBody="🔗" anchorClass="anchor-link" %}
