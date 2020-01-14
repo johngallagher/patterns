@@ -1,4 +1,7 @@
-# How to use concerns
+---
+categories: Rails
+name: How to use concerns
+---
 
 > TL;DR. Don't use Rails concerns.
 
