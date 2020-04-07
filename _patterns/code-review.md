@@ -6,8 +6,6 @@ name: Code Review
 Having Your Code Reviewed
 -------------------------
 
-* Write a PR title and description which explain the change being made to the system in the PR
-* Include a link to the ticket/story from the pull request
 * Be grateful for the reviewer's suggestions. ("Good call. I'll make that
   change.")
 * Explain why the code exists. ("It's like that because of these reasons. Would
