@@ -8,7 +8,7 @@ What makes a good pull request?
 
 * Write a clear, concise PR title *and* description which explain the change being made to the system in the PR
 * Include a link to the ticket/story from the pull request
-* If there's anything your unsure of or would like the reviewer to focus on please mention that in the description
+* If there's anything you're unsure of, or would like the reviewer to focus on please mention that in the description
 * Include some simple guidelines on what QA might be needed
 * Before marking the PR as ready for review, take a minute to do the first round of code review yourself. If there's anything obvious to you, address those issues
 
