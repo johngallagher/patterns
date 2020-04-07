@@ -332,11 +332,11 @@ AmbiguousBlockAssociation:
 
 Rails/UnknownEnv:
   Environments:
-    - production
-    - newproduction
-    - development
     - test
+    - development
     - staging
+    - review
+    - production
 
 Rails/SkipsModelValidations:
   Whitelist:
