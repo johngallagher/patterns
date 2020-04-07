@@ -19,4 +19,4 @@ Pull Reminders will randomly assign a reviwer. Also consider requesting addition
 
 - The original author of the code being changed may have valuable insight
 - A specific developer may have expertise in the subject of the PR (e.g. email system, search, Redis, Marketplace)
-- Your PR may be interesting to others if it introudces a new concept or framework
+- Your PR may be interesting to others if it introduces a new concept or framework
