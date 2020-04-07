@@ -46,7 +46,7 @@ CharacterLiteral:
   Enabled: false
 
 ClassAndModuleChildren:
-  Enabled: false
+  EnforcedStyle: nested
 
 ClassLength:
   Enabled: false
