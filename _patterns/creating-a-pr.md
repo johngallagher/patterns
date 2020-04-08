@@ -11,6 +11,7 @@ What makes a good pull request?
 * If there's anything you're unsure of, or would like the reviewer to focus on please mention that in the description
 * Include some simple guidelines on what QA might be needed
 * Before marking the PR as ready for review, take a minute to do the first round of code review yourself. If there's anything obvious to you, address those issues
+* If your work requires manual acceptance testing, do a cursory smoke test on your review app to ensure everything is in place (data, API keys, etc.) for QA Engineers to perform verification
 
 Assigning reviewers
 -------------------------
