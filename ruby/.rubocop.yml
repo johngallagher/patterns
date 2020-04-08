@@ -222,7 +222,7 @@ Style/SpecialGlobalVars:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/SymbolArray:
-  Enabled: false
+  EnforcedStyle: brackets
 Style/TrailingCommaInArrayLiteral:
   Enabled: false
 Style/TrailingCommaInHashLiteral:
@@ -236,4 +236,4 @@ Style/WhenThen:
 Style/WhileUntilModifier:
   Enabled: false
 Style/WordArray:
-  Enabled: false
+  EnforcedStyle: brackets
