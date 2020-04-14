@@ -224,9 +224,9 @@ Style/StringLiterals:
 Style/SymbolArray:
   Enabled: false
 Style/TrailingCommaInArrayLiteral:
-  Enabled: false
+  EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInHashLiteral:
-  Enabled: false
+  EnforcedStyleForMultiline: consistent_comma
 Style/TrivialAccessors:
   Enabled: false
 Style/VariableInterpolation:
