@@ -106,7 +106,7 @@ Naming/ConstantName:
 Naming/FileName:
   Enabled: false
 Naming/PredicateName:
-  NamePrefixBlacklist:
+  ForbiddenPrefixes:
     - is_
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
