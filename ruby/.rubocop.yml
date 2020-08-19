@@ -105,6 +105,8 @@ Naming/ConstantName:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#screaming-snake-case'
 Naming/FileName:
   Enabled: false
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
 Naming/PredicateName:
   ForbiddenPrefixes:
     - is_
