@@ -1,7 +1,8 @@
 require: rubocop-rails
 
 AllCops:
-  TargetRubyVersion: 2.6.2
+  TargetRubyVersion: 2.6.6
+  NewCops: enable
   Exclude:
     - db/schema.rb
     - bin/**/*
@@ -20,6 +21,9 @@ Layout/DotPosition:
   EnforcedStyle: trailing
 Layout/LeadingCommentSpace:
   Enabled: false
+Layout/LineLength:
+  Enabled: true
+  Max: 120
 
 Lint/AmbiguousBlockAssociation:
   Exclude:
@@ -85,9 +89,6 @@ Metrics/ClassLength:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
-Metrics/LineLength:
-  Enabled: true
-  Max: 120
 Metrics/MethodLength:
   Enabled: false
 Metrics/ParameterLists:
@@ -226,6 +227,8 @@ Style/StringLiterals:
 Style/SymbolArray:
   EnforcedStyle: brackets
 Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
