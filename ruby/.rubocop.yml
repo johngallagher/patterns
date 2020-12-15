@@ -62,7 +62,7 @@ Metrics/BlockLength:
     - app/admin/**/*
     - lib/tasks/**/*
     - spec/**/*
-  ExcludedMethods:
+  IgnoredMethods:
     - context
     - describe
     - it
