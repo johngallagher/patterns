@@ -21,9 +21,6 @@ Layout/DotPosition:
   EnforcedStyle: trailing
 Layout/LeadingCommentSpace:
   Enabled: false
-Layout/LineLength:
-  Enabled: true
-  Max: 120
 
 Lint/AmbiguousBlockAssociation:
   Exclude:
@@ -89,6 +86,9 @@ Metrics/ClassLength:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
+Metrics/LineLength:
+  Enabled: true
+  Max: 120
 Metrics/MethodLength:
   Enabled: false
 Metrics/ParameterLists:
