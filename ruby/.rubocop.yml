@@ -228,10 +228,13 @@ Style/SymbolArray:
   EnforcedStyle: brackets
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
+  AutoCorrect: false
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: consistent_comma
+  AutoCorrect: false
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
+  AutoCorrect: false
 Style/TrivialAccessors:
   Enabled: false
 Style/VariableInterpolation:
